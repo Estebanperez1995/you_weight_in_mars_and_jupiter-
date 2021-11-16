@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu peso en un lugar donde pesas menos</title>
+</head>
+<body>
+    <h1>Tu peso en otro planeta</h1>
+    <p>En la tierra pesas diferente que en la tierra o en marte</p>
+    <script>
+        var weight_user = prompt("Cual es tu peso? ");
+        // var peso = parseInt(weight_user); //el parseInt vuelve un numero en string en un numero en entero
+        var planet = parseInt(prompt("Elige tu planeta:1 es marte y 2 es jupiter "));
+        var Planet = planet ;
+        var peso = parseFloat(weight_user);
+        var g_tierra = 9.8;
+        var g_marte = 3.7;
+        var g_jupiter = 24.8;
+        var peso_final;
+        var nombre_planeta;
+
+        if(Planet == 1)
+        {
+            nombre_planeta = "Marte"
+            peso_final = peso*g_marte / g_tierra;
+        }
+        else if(Planet == 2)
+        {
+            nombre_planeta = "Jupiter"
+            peso_final =peso * g_jupiter/ g_tierra;
+        }
+        else 
+        {
+            nombre_planeta = "Kripton"
+            peso_final = 1000000;
+        }
+        peso_final = parseInt(peso_final); // parseFloat trabaja con decimales 
+        document.write("tu peso en "+ nombre_planeta +" es <strong>" + peso_final + " kilos</strong>");
+    </script>
+</body>
+</html>
